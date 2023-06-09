@@ -53,25 +53,27 @@ and after struggeling a lot I decied to run it thour an AI and it didn't find an
 for fucntions that make requests. Otherwise here I am using a "FromDto()" Funciton which basiccly converts the object from a dto one to the GitUser class used for the dbcontex. After which I turn off the identity insert so I can add the id explicitly.
 
 
-#CraftDemoConfig
+-`CraftDemoConfig`
 
 Here we create the schema for the database creation. In the OnConfiguration() function the only thing that I did was add the option to use the SQL connection string porived in the Configuration class
 
 After which I have added a DBSet for the GitHubUser table
 
 
-##Configuration
+-`Configuration`
 
 Here currently there is a const value for the configation string that needs to be changed depending on the SQL server ued.
 
 
-##Models folder - GitHubUserInfo
+##Models folder 
+- `GitHubUserInfo`
 
 This the is class which I am using to create the table in SQL. I have used data annotations to specify the properties of the fields.
 Additionally here lies the "FromDto()" function that converts a DTO object to a GitHubUser object.
 
 
-##Data Processing - ImportGitUserDto
+##Data Processing 
+- `ImportGitUserDto`
 
 Here is the class I am using to convert the json object received from github to a githubuserDTO object which I use to import the user to the table.
 
@@ -114,6 +116,12 @@ Here is the class I am using to convert the json object received from github to 
 	
 
 
+##Unit testing
 
+For now I have added unit tests only for the basic functionality as I still haven't learned mocking and I decided to not blantly copy-paste syntaxis for the mocking untill it works withoit me understanding it.
+So I have submitted this for now and will add Mocking tests in the next week or 2
+
+
+Open for suggestions and advice on how to improve the code! 
 
 	
