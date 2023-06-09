@@ -8,7 +8,7 @@ namespace CraftDemoTests
     {
 
             [Test]
-            public void Constructor_WithValidParameters()
+            public void Constructor_WithValidParameters_For_FreshDesk_Contact()
             {
                 // Arrange
                 string name = "Vladimir VLadimirov";
@@ -31,7 +31,7 @@ namespace CraftDemoTests
             }
 
         [Test]
-        public void Constructor_WithValidArguments()
+        public void Constructor_WithValidArguments_For_GitHubUser()
         {
             // Arrange
             string username = "C9VLadi";
@@ -89,7 +89,7 @@ namespace CraftDemoTests
         }
 
         [Test]
-        public void Constructor_WithInvalidArguments_ThrowsException()
+        public void Constructor_WithInvalidArguments_ThrowsException_For_GitHubUser()
         {
             // Arrange & Act & Assert
             //Username cannot be null
