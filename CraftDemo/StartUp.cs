@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace CraftDemo
 {
-    internal class StartUp
+    public class StartUp
     {
         static async Task Main(string[] args)
         {

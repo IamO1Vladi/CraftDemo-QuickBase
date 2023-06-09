@@ -10,35 +10,35 @@ namespace CraftDemo
     public class GitHubUser
     {
 
-        //public GitHubUser(string username, int id, string nodeId,
-        //    string gravatarId, string htmlUrl, string type, bool siteAdmin, string name,
-        //    string company, string blog, string location, string email,
-        //    string hireable, string bio, string twitterUsername, int publicRepos, int publicGists, int followers,
-        //    int following, DateTime createdAt, DateTime updatedAt, string avatarUrl)
-        //{
-        //    this.UserName = username;
-        //    this.Id = id;
-        //    this.NodeId = nodeId;
-        //    this.GravatarId = gravatarId;
-        //    this.HtmlUrl = htmlUrl;
-        //    this.Type = type;
-        //    this.SiteAdmin = siteAdmin;
-        //    this.Name = name;
-        //    this.Company = company;
-        //    this.Blog = blog;
-        //    this.Location = location;
-        //    this.Email = email;
-        //    this.Hireable = hireable;
-        //    this.Bio = bio;
-        //    this.TwitterUsername = twitterUsername;
-        //    this.PublicRepos = publicRepos;
-        //    this.PublicGists = publicGists;
-        //    this.Followers = followers;
-        //    this.Following = following;
-        //    this.CreatedAt = createdAt;
-        //    this.LastUpdatedAt = updatedAt;
-        //    this.AvatarUrl = avatarUrl;
-        //}
+        public GitHubUser(string username, int id, string nodeId,
+            string gravatarId, string htmlUrl, string type, bool siteAdmin, string name,
+            string company, string blog, string location, string email,
+            string hireable, string bio, string twitterUsername, int publicRepos, int publicGists, int followers,
+            int following, DateTime createdAt, DateTime updatedAt, string avatarUrl)
+        {
+            this.UserName = username;
+            this.Id = id;
+            this.NodeId = nodeId;
+            this.GravatarId = gravatarId;
+            this.HtmlUrl = htmlUrl;
+            this.Type = type;
+            this.SiteAdmin = siteAdmin;
+            this.Name = name;
+            this.Company = company;
+            this.Blog = blog;
+            this.Location = location;
+            this.Email = email;
+            this.Hireable = hireable;
+            this.Bio = bio;
+            this.TwitterUsername = twitterUsername;
+            this.PublicRepos = publicRepos;
+            this.PublicGists = publicGists;
+            this.Followers = followers;
+            this.Following = following;
+            this.CreatedAt = createdAt;
+            this.LastUpdatedAt = updatedAt;
+            this.AvatarUrl = avatarUrl;
+        }
 
 
         private string _username;
@@ -167,7 +167,7 @@ namespace CraftDemo
             {
                 if (value < 0)
                 {
-                    throw new InvalidOperationException("Reposes cannot be a negative number");
+                    throw new ArgumentOutOfRangeException("Reposes cannot be a negative number");
                 }
 
                 this._public_repos = value;
@@ -182,7 +182,7 @@ namespace CraftDemo
             {
                 if (value < 0)
                 {
-                    throw new InvalidOperationException("Reposes cannot be a negative number");
+                    throw new ArgumentOutOfRangeException("Reposes cannot be a negative number");
                 }
 
                 this._public_gists = value;
@@ -197,7 +197,7 @@ namespace CraftDemo
             {
                 if (value < 0)
                 {
-                    throw new ArgumentException("Followers cannot be a negative number");
+                    throw new ArgumentOutOfRangeException("Followers cannot be a negative number");
                 }
 
                 this._followers = value;
